@@ -98,3 +98,18 @@
     - 여기서 탄생한 테스트들을 기반으로 리팩터링을 진행할수도 있다.
 
 ---
+
+### 8장. 패키지
+
+- 패키지 설계의 원칙
+- 패키지 릴리스/재사용 등가 원칙(Release/Reuse Equivalency Principle, REP)
+    - 일반적으로 클래스 재사용 시 하나의 그룹 단위로 묶어 다같이 사용하는 경우가 많다. 이 때 해당 클래스들은 동일한 패키지 내에 위치해야한다.
+- 공통 폐쇄 원칙(Common Closure Principle, CCP)
+    - SRP의 패키지 관점 확장이다. 만약 어떤 클래스를 변경해야 한다면 이 때문에 변경이 필요한 클래스들이 하나의 패키지에 몰려있어야 한다는 원칙이다.
+- 공통 재사용 원칙(Common Reuse Principle, CRP)
+    - ISP의 패키지 관점 확장이다. 한 클라이언트가 사용하는 클래스들은 다른 클라이언트가 사용하는 클래스와 최대한 분리되어 있어야 한다는 원칙이다.
+- 의존 관계 비순환 원칙(Acyclic Dependencies Principle, ADP)
+    - 패키지 의존 관계 그래프에서는 순환이 있으면 안된다.
+- 안정된 의존 관계 원칙(Stable Dependencies Principle, SDP)
+- 안정된 추상화 원칙 (Stable Abstractions Principle, SAP)
+    - 많은 의존 관계를 받는 패키지는 안정되어 있어야 하며 그만큼 추상적이어야 한다.
